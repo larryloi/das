@@ -1,0 +1,4 @@
+---
+include:
+  - jobs.yml
+  - repositories.yml

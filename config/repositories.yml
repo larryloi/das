@@ -1,0 +1,11 @@
+---
+repositories:
+  general:
+    pool_size: 8
+  ops_repository:
+    database: sai_batian_integration
+    database_url: mysql2://chronos:chronos@hq-int-generic-db02.laxino.local/sai_batian_integration
+  hms_repository:
+    database: sai_batianh_integration
+    database_url: mysql2://chronos:chronos@hq-int-generic-db02.laxino.local/sai_batianh_integration
+

@@ -1,0 +1,112 @@
+GIT
+  remote: git@github.com:larryloi/chronos2.git
+  revision: 5202a6fef9aa5be4ebe58cc36eacc6f0583ff400
+  tag: main
+  specs:
+    chronos2 (0.2.0)
+      citrine (>= 0.1.0)
+      ulid (>= 1.0.0)
+
+GIT
+  remote: git@github.com:larryloi/citrine.git
+  revision: f4274444e6b541a7dc9d292b84964a0d33e49366
+  tag: main
+  specs:
+    citrine (0.3.11)
+      celluloid (= 0.17.4)
+      http (~> 4.0.0)
+      rack (>= 2.0.5)
+      reel (>= 0.6.1)
+      sequel (>= 5.8.0)
+      sinatra (>= 2.0.1)
+      sinatra-contrib (>= 2.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.4)
+      public_suffix (>= 2.0.2, < 6.0)
+    celluloid (0.17.4)
+      celluloid-essentials
+      celluloid-extras
+      celluloid-fsm
+      celluloid-pool
+      celluloid-supervision
+      timers (>= 4.1.1)
+    celluloid-essentials (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-extras (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-fsm (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-io (0.17.3)
+      celluloid (>= 0.17.2)
+      nio4r (>= 1.1)
+      timers (>= 4.1.1)
+    celluloid-pool (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-supervision (0.20.6)
+      timers (>= 4.1.1)
+    domain_name (0.5.20190701)
+      unf (>= 0.0.5, < 1.0.0)
+    http (4.0.5)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.0)
+      http_parser.rb (~> 0.6.0)
+    http-cookie (1.0.5)
+      domain_name (~> 0.5)
+    http-form_data (2.3.0)
+    http_parser.rb (0.6.0)
+    jwt (2.1.0)
+    multi_json (1.15.0)
+    mustermann (3.0.0)
+      ruby2_keywords (~> 0.0.1)
+    mysql2 (0.5.5)
+    nio4r (2.5.9)
+    public_suffix (5.0.1)
+    rack (2.2.7)
+    rack-protection (3.0.6)
+      rack
+    reel (0.6.1)
+      celluloid (>= 0.15.1)
+      celluloid-io (>= 0.15.0)
+      http (>= 0.6.0.pre)
+      http_parser.rb (>= 0.6.0)
+      websocket-driver (>= 0.5.1)
+    ruby2_keywords (0.0.5)
+    sequel (5.69.0)
+    sinatra (3.0.6)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.0.6)
+      tilt (~> 2.0)
+    sinatra-contrib (3.0.6)
+      multi_json
+      mustermann (~> 3.0)
+      rack-protection (= 3.0.6)
+      sinatra (= 3.0.6)
+      tilt (~> 2.0)
+    sysrandom (1.0.5)
+    tilt (2.2.0)
+    timers (4.3.5)
+    ulid (1.4.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.8.2)
+    websocket-driver (0.7.5)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  chronos2!
+  citrine!
+  jwt (= 2.1.0)
+  mysql2 (>= 0.5.1)
+  sysrandom
+
+BUNDLED WITH
+   1.17.2

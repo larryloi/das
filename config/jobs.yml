@@ -1,0 +1,58 @@
+---
+jobs:
+  archive:
+    general:
+      worker: archive_interactor
+      batches: 1
+      batch_size: 200
+      primary_key: id
+      primary_key_uuid: false
+    jobs:
+      - id: 01CJ1WT49FKK2PAWY1SH7A3Q8D
+        batches: 1
+        batch_size: 200
+        trace_attr: updated_at
+        from: ops.jackpot_transactions
+        to: hms.jackpot_transactions
+        primary_key: id
+        primary_key_uuid: false
+        reject_attrs: [ purge_at ]
+  purge:
+    general:
+      worker: purge_interactor
+      start_after: 1m
+      wait: 1m
+      batches: 1
+      batch_size: 200
+      primary_key: id
+      primary_key_uuid: false
+      retention_period: "30d"
+    jobs:
+      - id: 01CJ41Y635F2P4NRHXHX2TMNZ2
+        from: ops.jackpot_transactions
+        retention_period: "7d"
+      - id: 01CJ41Y635F2P4NRHXHX2TMNZ3
+        from: ops.chronos_trace_logs
+        purge_attr: created_at
+      - id: 01CJ41Y635F2P4NRHXHX2TMNZ4
+        from: hms.chronos_trace_logs
+        purge_attr: created_at
+      - id: 01CJ41Y635F2P4NRHXHX2TMNZ5
+        from: hms.chronos_archive_transaction_logs
+        purge_attr: closed_at
+        retention_period: "7d"
+  monitor:
+    general:
+      worker: monitor_interactor
+    jobs:
+      - id: 01CK7K1AHQ78DW235EV1S8KDR2
+        trace_type: archive
+        trace_from: "hms"
+        every: "5m"
+        abnormal_latency: "10m"
+      - id: 01CK8CK545JDX3X1JTMHXAVKW3
+        trace_type: purge
+        trace_from: "ops"
+        every: "5m"
+        abnormal_latency: "10m"
+

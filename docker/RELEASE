@@ -1,0 +1,7 @@
+#REPO_PATH=docker-repos:8123/chronos2/
+IMAGE=das
+TAG=0.1.0
+#BASE_IMAGE := das-base
+#BASE_IMAGE_TAG := 0.1.0
+BASE_IMAGE := ruby
+BASE_IMAGE_TAG := 2.6.10

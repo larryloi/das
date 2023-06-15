@@ -1,7 +1,7 @@
 GIT
   remote: git@github.com:larryloi/chronos2.git
-  revision: 5202a6fef9aa5be4ebe58cc36eacc6f0583ff400
-  tag: main
+  revision: a7c844ebfb26007fe7566453e9613a565d79b878
+  tag: 0.2.0
   specs:
     chronos2 (0.2.0)
       citrine (>= 0.1.0)
@@ -9,8 +9,8 @@ GIT
 
 GIT
   remote: git@github.com:larryloi/citrine.git
-  revision: f4274444e6b541a7dc9d292b84964a0d33e49366
-  tag: main
+  revision: 04448af59b6bcf9643b0265ffbe16a615ef1b861
+  tag: 0.3.11
   specs:
     citrine (0.3.11)
       celluloid (= 0.17.4)

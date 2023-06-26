@@ -1,7 +1,7 @@
 GIT
   remote: git@github.com:larryloi/chronos2.git
-  revision: a7c844ebfb26007fe7566453e9613a565d79b878
-  tag: 0.2.0
+  revision: d1d73fe24397415640513dbfa8a3e70ec2aca115
+  tag: 0.2.1
   specs:
     chronos2 (0.2.0)
       citrine (>= 0.1.0)

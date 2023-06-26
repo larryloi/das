@@ -6,3 +6,4 @@ gem 'sysrandom'
 
 gem 'citrine', git: 'git@github.com:larryloi/citrine.git', tag: "0.3.11"
 gem 'chronos2', git: 'git@github.com:larryloi/chronos2.git', tag: "0.2.1"
+gem 'irb'
